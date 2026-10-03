@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fox Riley — Designer &amp; Developer</title>
+  <meta name="description" content="Fox Riley builds thoughtful digital experiences at the intersection of design and code." />
+  <meta name="theme-color" content="#07070b" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23ff7a45'/><stop offset='1' stop-color='%237c5cff'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='url(%23g)'/><text x='50' y='68' font-size='54' text-anchor='middle' font-family='Georgia,serif' fill='white' font-style='italic'>F</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="aurora" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"></span></div>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="brand" aria-label="Home">
+      <span class="brand-mark">F</span>
+      <span class="brand-name">Fox Riley</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact" class="nav-cta">Let’s talk <span aria-hidden="true">→</span></a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow reveal"><span class="pulse"></span> Available for new projects — 2026</p>
+      <h1 class="hero-title">
+        <span class="line"><span class="word">Crafting</span> <span class="word"><em>digital</em></span></span>
+        <span class="line"><span class="word">experiences</span> <span class="word">that</span></span>
+        <span class="line"><span class="word"><em class="gradient-text">feel alive.</em></span></span>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-sub reveal">I’m a designer &amp; developer building expressive, high‑performance websites and products for people who care about the details.</p>
+        <div class="hero-actions reveal">
+          <a href="#work" class="btn btn-primary magnetic"><span>See my work</span></a>
+          <a href="#contact" class="btn btn-ghost magnetic"><span>Get in touch</span></a>
+        </div>
+      </div>
+      <a href="#work" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Interaction Design</span><i>✦</i><span>Creative Development</span><i>✦</i><span>Brand Systems</span><i>✦</i><span>Motion</span><i>✦</i><span>WebGL</span><i>✦</i><span>Product Strategy</span><i>✦</i>
+        <span>Interaction Design</span><i>✦</i><span>Creative Development</span><i>✦</i><span>Brand Systems</span><i>✦</i><span>Motion</span><i>✦</i><span>WebGL</span><i>✦</i><span>Product Strategy</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- WORK -->
+    <section class="section" id="work">
+      <div class="section-head reveal">
+        <span class="kicker">01 — Selected work</span>
+        <h2>Projects I’m <em>proud</em> of</h2>
+      </div>
+
+      <div class="work-grid">
+        <article class="card tilt reveal" style="--c1:#ff7a45;--c2:#ff3d7f">
+          <div class="card-visual">
+            <div class="orb"></div>
+            <svg class="card-art" viewBox="0 0 200 120" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1"><circle cx="60" cy="60" r="40"/><circle cx="100" cy="60" r="40"/><circle cx="140" cy="60" r="40"/></g></svg>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>Brand · Web</span><span>2026</span></div>
+            <h3>Solstice Studio</h3>
+            <p>An immersive identity and website for an architecture practice, built around light and shadow.</p>
+          </div>
+        </article>
+
+        <article class="card tilt reveal" style="--c1:#7c5cff;--c2:#2ad3ff">
+          <div class="card-visual">
+            <div class="orb"></div>
+            <svg class="card-art" viewBox="0 0 200 120" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1"><path d="M10 100 L60 30 L100 80 L140 20 L190 100"/><path d="M10 110 L60 40 L100 90 L140 30 L190 110" opacity=".5"/></g></svg>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>Product · Data</span><span>2025</span></div>
+            <h3>Northwind Analytics</h3>
+            <p>A real‑time dashboard that turns millions of events into calm, legible insight.</p>
+          </div>
+        </article>
+
+        <article class="card tilt reveal" style="--c1:#21e6a1;--c2:#2a7bff">
+          <div class="card-visual">
+            <div class="orb"></div>
+            <svg class="card-art" viewBox="0 0 200 120" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1"><rect x="40" y="20" width="80" height="80" rx="8" transform="rotate(12 80 60)"/><rect x="80" y="20" width="80" height="80" rx="8" transform="rotate(-8 120 60)"/></g></svg>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>Mobile · App</span><span>2025</span></div>
+            <h3>Verdant</h3>
+            <p>A plant‑care companion app with playful micro‑interactions and a 4.9★ App Store rating.</p>
+          </div>
+        </article>
+
+        <article class="card tilt reveal" style="--c1:#ffd23f;--c2:#ff7a45">
+          <div class="card-visual">
+            <div class="orb"></div>
+            <svg class="card-art" viewBox="0 0 200 120" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1"><path d="M20 60 Q60 0 100 60 T180 60"/><path d="M20 70 Q60 10 100 70 T180 70" opacity=".6"/><path d="M20 80 Q60 20 100 80 T180 80" opacity=".3"/></g></svg>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>Creative · WebGL</span><span>2024</span></div>
+            <h3>Waveform Festival</h3>
+            <p>An audio‑reactive festival site where every visitor’s cursor shapes the soundscape.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="section-head reveal">
+        <span class="kicker">02 — About</span>
+      </div>
+      <p class="about-statement reveal-words">
+        I believe the web should be <em>beautiful</em>, fast, and a little bit surprising. For the past eight years I’ve partnered with startups and studios to turn ambitious ideas into products people <em>love</em> to use.
+      </p>
+
+      <div class="stats">
+        <div class="stat reveal"><span class="stat-num" data-count="8">0</span><span class="stat-plus">+</span><p>Years of experience</p></div>
+        <div class="stat reveal"><span class="stat-num" data-count="120">0</span><span class="stat-plus">+</span><p>Projects shipped</p></div>
+        <div class="stat reveal"><span class="stat-num" data-count="14">0</span><p>Design awards</p></div>
+        <div class="stat reveal"><span class="stat-num" data-count="99">0</span><span class="stat-plus">%</span><p>Lighthouse average</p></div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="section-head reveal">
+        <span class="kicker">03 — Services</span>
+        <h2>How I can <em>help</em></h2>
+      </div>
+      <ul class="services">
+        <li class="service reveal">
+          <span class="service-num">01</span>
+          <h3>Web Design &amp; Development</h3>
+          <p>Bespoke, responsive sites engineered for speed, accessibility, and delight.</p>
+          <span class="service-arrow" aria-hidden="true">↗</span>
+        </li>
+        <li class="service reveal">
+          <span class="service-num">02</span>
+          <h3>Product &amp; UX Design</h3>
+          <p>Research‑led interfaces that make complex products feel effortless.</p>
+          <span class="service-arrow" aria-hidden="true">↗</span>
+        </li>
+        <li class="service reveal">
+          <span class="service-num">03</span>
+          <h3>Brand Identity</h3>
+          <p>Distinctive visual systems — logos, type, color, and motion that scale.</p>
+          <span class="service-arrow" aria-hidden="true">↗</span>
+        </li>
+        <li class="service reveal">
+          <span class="service-num">04</span>
+          <h3>Creative Technology</h3>
+          <p>WebGL, generative art, and interactive installations that stop the scroll.</p>
+          <span class="service-arrow" aria-hidden="true">↗</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- TESTIMONIAL -->
+    <section class="section quote reveal">
+      <blockquote>
+        <p>“Working with Fox felt like adding a superpower to our team. The site didn’t just look incredible — our conversions doubled.”</p>
+        <footer><span class="avatar">MK</span><span><strong>Maya K.</strong><br />Founder, Solstice Studio</span></footer>
+      </blockquote>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <span class="kicker reveal">04 — Contact</span>
+      <h2 class="contact-title reveal">Have an idea?<br /><em class="gradient-text">Let’s make it real.</em></h2>
+      <a href="mailto:hello@example.com" class="contact-link magnetic reveal">
+        <span>hello@example.com</span>
+        <span class="contact-arrow" aria-hidden="true">→</span>
+      </a>
+      <div class="socials reveal">
+        <a href="https://github.com/foxnriley-dev" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" rel="noopener">LinkedIn</a>
+        <a href="#" rel="noopener">Dribbble</a>
+        <a href="#" rel="noopener">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year">2026</span> Fox Riley</span>
+    <span class="clock" id="clock">--:--</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
