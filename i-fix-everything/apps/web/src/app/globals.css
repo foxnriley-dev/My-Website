@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* Color values come from @ife/design-tokens (injected in layout.tsx as --ife-*). */
+@theme inline {
+  --color-background: var(--ife-background);
+  --color-surface: var(--ife-surface);
+  --color-raised: var(--ife-surface-raised);
+  --color-sunken: var(--ife-surface-sunken);
+  --color-border: var(--ife-border);
+  --color-border-strong: var(--ife-border-strong);
+  --color-text: var(--ife-text);
+  --color-muted: var(--ife-text-muted);
+  --color-inverse: var(--ife-text-inverse);
+  --color-accent: var(--ife-accent);
+  --color-accent-hover: var(--ife-accent-hover);
+  --color-on-accent: var(--ife-accent-text);
+  --color-accent-subtle: var(--ife-accent-subtle);
+  --color-focus: var(--ife-focus-ring);
+  --color-success: var(--ife-success);
+  --color-success-subtle: var(--ife-success-subtle);
+  --color-warning: var(--ife-warning);
+  --color-warning-subtle: var(--ife-warning-subtle);
+  --color-danger: var(--ife-danger);
+  --color-danger-subtle: var(--ife-danger-subtle);
+  --color-info: var(--ife-info);
+  --color-info-subtle: var(--ife-info-subtle);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-card: 14px;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background: var(--ife-background);
+  color: var(--ife-text);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ife-focus-ring);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Inputs at 16px+ avoid iOS zoom-on-focus. */
+input, select, textarea { font-size: max(16px, 1rem); }
+
+.skip-link {
+  position: absolute; left: -9999px; top: 8px; z-index: 50;
+  padding: 8px 12px; border-radius: 8px;
+  background: var(--ife-accent); color: var(--ife-accent-text);
+}
+.skip-link:focus { left: 8px; }

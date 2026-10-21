@@ -1,0 +1,17 @@
+appId: dev.placeholder.ifixeverything.dev
+---
+# App termination recovery: the server copy reappears after a cold start.
+- launchApp
+- tapOn: "Repairs"
+- assertVisible: "Turns over but will not start.*"
+- stopApp
+- launchApp
+- tapOn: "Repairs"
+- assertVisible: "Turns over but will not start.*"
+- tapOn: "Account"
+- scrollUntilVisible:
+    element:
+      id: "sign-out"
+- tapOn:
+    id: "sign-out"
+- assertVisible: "Sign in"

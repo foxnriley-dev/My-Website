@@ -1,0 +1,42 @@
+{
+  "name": "i-fix-everything",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev:web": "pnpm --filter @ife/web dev",
+    "dev:worker": "pnpm --filter @ife/worker dev",
+    "dev:mobile": "pnpm --filter @ife/mobile start",
+    "db:start": "supabase start",
+    "db:reset": "supabase db reset",
+    "env:local": "node scripts/write-local-env.mjs",
+    "typecheck": "pnpm -r --parallel typecheck",
+    "lint": "eslint .",
+    "test": "pnpm test:unit && pnpm test:integration",
+    "test:unit": "vitest run --project unit",
+    "test:integration": "vitest run --project integration",
+    "test:mobile": "pnpm --filter @ife/mobile test",
+    "test:e2e": "pnpm --filter @ife/web test:e2e",
+    "check:config": "node scripts/check-deploy-config.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@ife/api-client": "workspace:*",
+    "@ife/contracts": "workspace:*",
+    "@ife/domain": "workspace:*",
+    "@ife/server": "workspace:*",
+    "@supabase/supabase-js": "2.118.0",
+    "@types/node": "26.6.5",
+    "eslint": "10.13.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "sharp": "0.35.5",
+    "supabase": "2.121.0",
+    "tsx": "4.23.15",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "8.72.0",
+    "vitest": "5.0.5"
+  }
+}

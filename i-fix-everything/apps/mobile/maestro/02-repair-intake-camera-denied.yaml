@@ -1,0 +1,24 @@
+appId: dev.placeholder.ifixeverything.dev
+---
+# Assumes 01 ran. Deny camera permission when prompted to verify the fallback.
+- launchApp
+- tapOn:
+    id: "start-repair"
+- tapOn: "Blue kart.*"
+- tapOn:
+    id: "continue"
+- tapOn:
+    id: "concern"
+- inputText: "Turns over but will not start after winter"
+- hideKeyboard
+- tapOn:
+    id: "next"
+- tapOn:
+    id: "take-photo"
+- runFlow:
+    when:
+      visible: "Don.?t Allow"
+    commands:
+      - tapOn: "Don.?t Allow"
+- assertVisible: "Camera access is off"
+- assertVisible: "Choose from library instead"

@@ -1,0 +1,23 @@
+appId: dev.placeholder.ifixeverything.dev
+---
+- launchApp:
+    clearState: true
+- tapOn: "Email"
+- inputText: ${EMAIL}
+- tapOn: "Password"
+- inputText: ${PASSWORD}
+- tapOn:
+    id: "sign-in"
+- assertVisible: "Start by adding your machine"
+- tapOn: "Add a machine"
+- tapOn: "Go kart"
+- tapOn:
+    id: "nickname"
+- inputText: "Blue kart"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: "save-machine"
+- tapOn:
+    id: "save-machine"
+- assertVisible: "Blue kart"

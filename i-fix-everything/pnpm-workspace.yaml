@@ -1,0 +1,13 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+
+# Expo supports isolated installs from SDK 54, but several React Native
+# libraries still resolve peers by hoisting. Hoisted keeps one copy of
+# react / react-native across web and mobile (see docs/decisions.md D-004).
+nodeLinker: hoisted
+
+onlyBuiltDependencies:
+  - sharp
+  - esbuild
+  - supabase
